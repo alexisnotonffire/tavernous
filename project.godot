@@ -1,0 +1,65 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Patron",
+"language": "GDScript",
+"path": "res://Patrons/Patron.gd"
+}, {
+"base": "Reference",
+"class": "PatronFactory",
+"language": "GDScript",
+"path": "res://Patrons/PatronFactory.gd"
+}, {
+"base": "Reference",
+"class": "Purchasable",
+"language": "GDScript",
+"path": "res://Items/Purchasable.gd"
+}, {
+"base": "Purchasable",
+"class": "Stool",
+"language": "GDScript",
+"path": "res://Items/Seating/Stool.gd"
+}, {
+"base": "Reference",
+"class": "StoolFactory",
+"language": "GDScript",
+"path": "res://Items/Seating/StoolFactory.gd"
+} ]
+_global_script_class_icons={
+"Patron": "",
+"PatronFactory": "",
+"Purchasable": "",
+"Stool": "",
+"StoolFactory": ""
+}
+
+[application]
+
+config/name="tavernous"
+run/main_scene="res://Main.tscn"
+config/icon="res://Assets/icon.png"
+
+[gdnative]
+
+singletons=[  ]
+
+[global]
+
+font=false
+
+[gui]
+
+theme/custom_font="res://Assets/font.tres"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
